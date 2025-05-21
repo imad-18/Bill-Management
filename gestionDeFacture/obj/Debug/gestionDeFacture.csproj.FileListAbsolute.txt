@@ -1,0 +1,13 @@
+C:\Users\lenovo\source\repos\gestionDeFacture\gestionDeFacture\bin\Debug\gestionDeFacture.exe.config
+C:\Users\lenovo\source\repos\gestionDeFacture\gestionDeFacture\bin\Debug\gestionDeFacture.exe
+C:\Users\lenovo\source\repos\gestionDeFacture\gestionDeFacture\bin\Debug\gestionDeFacture.pdb
+C:\Users\lenovo\source\repos\gestionDeFacture\gestionDeFacture\bin\Debug\MetroFramework.dll
+C:\Users\lenovo\source\repos\gestionDeFacture\gestionDeFacture\bin\Debug\MetroFramework.Fonts.dll
+C:\Users\lenovo\source\repos\gestionDeFacture\gestionDeFacture\obj\Debug\gestionDeFacture.csproj.AssemblyReference.cache
+C:\Users\lenovo\source\repos\gestionDeFacture\gestionDeFacture\obj\Debug\gestionDeFacture.Form1.resources
+C:\Users\lenovo\source\repos\gestionDeFacture\gestionDeFacture\obj\Debug\gestionDeFacture.Properties.Resources.resources
+C:\Users\lenovo\source\repos\gestionDeFacture\gestionDeFacture\obj\Debug\gestionDeFacture.csproj.GenerateResource.cache
+C:\Users\lenovo\source\repos\gestionDeFacture\gestionDeFacture\obj\Debug\gestionDeFacture.csproj.CoreCompileInputs.cache
+C:\Users\lenovo\source\repos\gestionDeFacture\gestionDeFacture\obj\Debug\gestionD.315B3944.Up2Date
+C:\Users\lenovo\source\repos\gestionDeFacture\gestionDeFacture\obj\Debug\gestionDeFacture.exe
+C:\Users\lenovo\source\repos\gestionDeFacture\gestionDeFacture\obj\Debug\gestionDeFacture.pdb
