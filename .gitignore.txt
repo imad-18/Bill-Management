@@ -1,0 +1,50 @@
+## Ignore Visual Studio temp files, build results, and more
+
+# User-specific files
+*.rsuser
+*.suo
+*.user
+*.userosscache
+*.sln.docstates
+
+# Build results
+[Dd]ebug/
+[Rr]elease/
+x64/
+x86/
+[Aa][Rr][Mm]/
+bld/
+[Bb]in/
+[Oo]bj/
+[Ll]og/
+*.log
+
+# VS folder
+.vs/
+
+# Windows image file caches
+Thumbs.db
+ehthumbs.db
+
+# Installer logs
+*.msi
+*.msm
+*.msp
+
+# Recycle Bin used on file shares
+$RECYCLE.BIN/
+
+# Backup files
+*.bak
+
+# NuGet
+*.nupkg
+*.snupkg
+packages/
+*.nuspec
+
+# Others
+*.tmp
+*.cache
+*.sqlite
+*.db

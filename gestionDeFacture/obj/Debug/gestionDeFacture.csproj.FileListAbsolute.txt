@@ -11,3 +11,4 @@ C:\Users\lenovo\source\repos\gestionDeFacture\gestionDeFacture\obj\Debug\gestion
 C:\Users\lenovo\source\repos\gestionDeFacture\gestionDeFacture\obj\Debug\gestionD.315B3944.Up2Date
 C:\Users\lenovo\source\repos\gestionDeFacture\gestionDeFacture\obj\Debug\gestionDeFacture.exe
 C:\Users\lenovo\source\repos\gestionDeFacture\gestionDeFacture\obj\Debug\gestionDeFacture.pdb
+C:\Users\lenovo\source\repos\gestionDeFacture\gestionDeFacture\obj\Debug\gestionDeFacture.MenuForm.resources
