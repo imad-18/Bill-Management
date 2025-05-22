@@ -133,5 +133,15 @@ namespace gestionDeFacture
                 MessageBox.Show("Veuillez sélectionner un client à modifier.");
             }
         }
+
+        private void ville_comboBox_SelectedIndexChanged(object sender, EventArgs e)
+        {
+
+        }
+
+        private void emptyFieldsBtn_Click(object sender, EventArgs e)
+        {
+            emptyTextBoxFields();
+        }
     }
 }

@@ -29,6 +29,9 @@
         private void InitializeComponent()
         {
             this.metroPanel1 = new MetroFramework.Controls.MetroPanel();
+            this.patente_textBox = new System.Windows.Forms.TextBox();
+            this.nom_respo_textBox = new System.Windows.Forms.TextBox();
+            this.rc_textBox = new System.Windows.Forms.TextBox();
             this.label8 = new System.Windows.Forms.Label();
             this.label7 = new System.Windows.Forms.Label();
             this.label6 = new System.Windows.Forms.Label();
@@ -43,31 +46,26 @@
             this.label2 = new System.Windows.Forms.Label();
             this.label1 = new System.Windows.Forms.Label();
             this.metroPanel2 = new MetroFramework.Controls.MetroPanel();
-            this.ClientListView = new System.Windows.Forms.ListView();
-            this.ajouterClientBtn = new System.Windows.Forms.Button();
-            this.modifierClientBtn = new System.Windows.Forms.Button();
-            this.rc_textBox = new System.Windows.Forms.TextBox();
-            this.nom_respo_textBox = new System.Windows.Forms.TextBox();
-            this.patente_textBox = new System.Windows.Forms.TextBox();
-            this.label9 = new System.Windows.Forms.Label();
-            this.label10 = new System.Windows.Forms.Label();
-            this.label11 = new System.Windows.Forms.Label();
-            this.label12 = new System.Windows.Forms.Label();
-            this.nom_textBox = new System.Windows.Forms.TextBox();
-            this.prenom_textBox = new System.Windows.Forms.TextBox();
-            this.email_textBox = new System.Windows.Forms.TextBox();
-            this.tel_textBox = new System.Windows.Forms.TextBox();
-            this.label13 = new System.Windows.Forms.Label();
-            this.adresse_textBox = new System.Windows.Forms.TextBox();
-            this.label14 = new System.Windows.Forms.Label();
-            this.label15 = new System.Windows.Forms.Label();
-            this.fax_textBox = new System.Windows.Forms.TextBox();
-            this.portable_textBox = new System.Windows.Forms.TextBox();
-            this.label16 = new System.Windows.Forms.Label();
-            this.label17 = new System.Windows.Forms.Label();
-            this.ville_comboBox = new System.Windows.Forms.ComboBox();
-            this.pays_textBox = new System.Windows.Forms.TextBox();
             this.emptyFieldsBtn = new System.Windows.Forms.Button();
+            this.pays_textBox = new System.Windows.Forms.TextBox();
+            this.ville_comboBox = new System.Windows.Forms.ComboBox();
+            this.label17 = new System.Windows.Forms.Label();
+            this.label16 = new System.Windows.Forms.Label();
+            this.portable_textBox = new System.Windows.Forms.TextBox();
+            this.fax_textBox = new System.Windows.Forms.TextBox();
+            this.label15 = new System.Windows.Forms.Label();
+            this.label14 = new System.Windows.Forms.Label();
+            this.adresse_textBox = new System.Windows.Forms.TextBox();
+            this.label13 = new System.Windows.Forms.Label();
+            this.tel_textBox = new System.Windows.Forms.TextBox();
+            this.email_textBox = new System.Windows.Forms.TextBox();
+            this.prenom_textBox = new System.Windows.Forms.TextBox();
+            this.nom_textBox = new System.Windows.Forms.TextBox();
+            this.label12 = new System.Windows.Forms.Label();
+            this.label11 = new System.Windows.Forms.Label();
+            this.label10 = new System.Windows.Forms.Label();
+            this.label9 = new System.Windows.Forms.Label();
+            this.ClientListView = new System.Windows.Forms.ListView();
             this.society_col = ((System.Windows.Forms.ColumnHeader)(new System.Windows.Forms.ColumnHeader()));
             this.clientId_col = ((System.Windows.Forms.ColumnHeader)(new System.Windows.Forms.ColumnHeader()));
             this.rs_col = ((System.Windows.Forms.ColumnHeader)(new System.Windows.Forms.ColumnHeader()));
@@ -77,6 +75,8 @@
             this.fax_col = ((System.Windows.Forms.ColumnHeader)(new System.Windows.Forms.ColumnHeader()));
             this.email_col = ((System.Windows.Forms.ColumnHeader)(new System.Windows.Forms.ColumnHeader()));
             this.adresse_col = ((System.Windows.Forms.ColumnHeader)(new System.Windows.Forms.ColumnHeader()));
+            this.ajouterClientBtn = new System.Windows.Forms.Button();
+            this.modifierClientBtn = new System.Windows.Forms.Button();
             this.metroPanel1.SuspendLayout();
             this.metroPanel2.SuspendLayout();
             this.SuspendLayout();
@@ -111,6 +111,27 @@
             this.metroPanel1.VerticalScrollbarBarColor = true;
             this.metroPanel1.VerticalScrollbarHighlightOnWheel = false;
             this.metroPanel1.VerticalScrollbarSize = 10;
+            // 
+            // patente_textBox
+            // 
+            this.patente_textBox.Location = new System.Drawing.Point(860, 95);
+            this.patente_textBox.Name = "patente_textBox";
+            this.patente_textBox.Size = new System.Drawing.Size(169, 26);
+            this.patente_textBox.TabIndex = 17;
+            // 
+            // nom_respo_textBox
+            // 
+            this.nom_respo_textBox.Location = new System.Drawing.Point(860, 55);
+            this.nom_respo_textBox.Name = "nom_respo_textBox";
+            this.nom_respo_textBox.Size = new System.Drawing.Size(169, 26);
+            this.nom_respo_textBox.TabIndex = 16;
+            // 
+            // rc_textBox
+            // 
+            this.rc_textBox.Location = new System.Drawing.Point(860, 13);
+            this.rc_textBox.Name = "rc_textBox";
+            this.rc_textBox.Size = new System.Drawing.Size(169, 26);
+            this.rc_textBox.TabIndex = 15;
             // 
             // label8
             // 
@@ -253,6 +274,170 @@
             this.metroPanel2.VerticalScrollbarHighlightOnWheel = false;
             this.metroPanel2.VerticalScrollbarSize = 10;
             // 
+            // emptyFieldsBtn
+            // 
+            this.emptyFieldsBtn.BackColor = System.Drawing.Color.SandyBrown;
+            this.emptyFieldsBtn.Location = new System.Drawing.Point(765, 142);
+            this.emptyFieldsBtn.Name = "emptyFieldsBtn";
+            this.emptyFieldsBtn.Size = new System.Drawing.Size(193, 32);
+            this.emptyFieldsBtn.TabIndex = 23;
+            this.emptyFieldsBtn.Text = "Vider les champs";
+            this.emptyFieldsBtn.UseVisualStyleBackColor = false;
+            this.emptyFieldsBtn.Click += new System.EventHandler(this.emptyFieldsBtn_Click);
+            // 
+            // pays_textBox
+            // 
+            this.pays_textBox.Location = new System.Drawing.Point(774, 63);
+            this.pays_textBox.Name = "pays_textBox";
+            this.pays_textBox.Size = new System.Drawing.Size(169, 26);
+            this.pays_textBox.TabIndex = 22;
+            // 
+            // ville_comboBox
+            // 
+            this.ville_comboBox.FormattingEnabled = true;
+            this.ville_comboBox.Items.AddRange(new object[] {
+            "Kénitra",
+            "Rabat ",
+            "Casablaca"});
+            this.ville_comboBox.Location = new System.Drawing.Point(774, 13);
+            this.ville_comboBox.Name = "ville_comboBox";
+            this.ville_comboBox.Size = new System.Drawing.Size(177, 28);
+            this.ville_comboBox.TabIndex = 21;
+            this.ville_comboBox.SelectedIndexChanged += new System.EventHandler(this.ville_comboBox_SelectedIndexChanged);
+            // 
+            // label17
+            // 
+            this.label17.AutoSize = true;
+            this.label17.Location = new System.Drawing.Point(677, 67);
+            this.label17.Name = "label17";
+            this.label17.Size = new System.Drawing.Size(51, 20);
+            this.label17.TabIndex = 20;
+            this.label17.Text = "Pays :";
+            // 
+            // label16
+            // 
+            this.label16.AutoSize = true;
+            this.label16.Location = new System.Drawing.Point(677, 22);
+            this.label16.Name = "label16";
+            this.label16.Size = new System.Drawing.Size(46, 20);
+            this.label16.TabIndex = 19;
+            this.label16.Text = "Ville :";
+            // 
+            // portable_textBox
+            // 
+            this.portable_textBox.Location = new System.Drawing.Point(407, 148);
+            this.portable_textBox.Name = "portable_textBox";
+            this.portable_textBox.Size = new System.Drawing.Size(169, 26);
+            this.portable_textBox.TabIndex = 18;
+            // 
+            // fax_textBox
+            // 
+            this.fax_textBox.Location = new System.Drawing.Point(407, 99);
+            this.fax_textBox.Name = "fax_textBox";
+            this.fax_textBox.Size = new System.Drawing.Size(169, 26);
+            this.fax_textBox.TabIndex = 17;
+            // 
+            // label15
+            // 
+            this.label15.AutoSize = true;
+            this.label15.Location = new System.Drawing.Point(325, 151);
+            this.label15.Name = "label15";
+            this.label15.Size = new System.Drawing.Size(76, 20);
+            this.label15.TabIndex = 16;
+            this.label15.Text = "Portable :";
+            // 
+            // label14
+            // 
+            this.label14.AutoSize = true;
+            this.label14.Location = new System.Drawing.Point(325, 105);
+            this.label14.Name = "label14";
+            this.label14.Size = new System.Drawing.Size(43, 20);
+            this.label14.TabIndex = 15;
+            this.label14.Text = "Fax :";
+            this.label14.Click += new System.EventHandler(this.label14_Click);
+            // 
+            // adresse_textBox
+            // 
+            this.adresse_textBox.Location = new System.Drawing.Point(407, 16);
+            this.adresse_textBox.Multiline = true;
+            this.adresse_textBox.Name = "adresse_textBox";
+            this.adresse_textBox.ScrollBars = System.Windows.Forms.ScrollBars.Vertical;
+            this.adresse_textBox.Size = new System.Drawing.Size(236, 68);
+            this.adresse_textBox.TabIndex = 14;
+            // 
+            // label13
+            // 
+            this.label13.AutoSize = true;
+            this.label13.Location = new System.Drawing.Point(325, 22);
+            this.label13.Name = "label13";
+            this.label13.Size = new System.Drawing.Size(76, 20);
+            this.label13.TabIndex = 13;
+            this.label13.Text = "Adresse :";
+            // 
+            // tel_textBox
+            // 
+            this.tel_textBox.Location = new System.Drawing.Point(95, 148);
+            this.tel_textBox.Name = "tel_textBox";
+            this.tel_textBox.Size = new System.Drawing.Size(169, 26);
+            this.tel_textBox.TabIndex = 12;
+            // 
+            // email_textBox
+            // 
+            this.email_textBox.Location = new System.Drawing.Point(95, 102);
+            this.email_textBox.Name = "email_textBox";
+            this.email_textBox.Size = new System.Drawing.Size(169, 26);
+            this.email_textBox.TabIndex = 11;
+            // 
+            // prenom_textBox
+            // 
+            this.prenom_textBox.Location = new System.Drawing.Point(95, 61);
+            this.prenom_textBox.Name = "prenom_textBox";
+            this.prenom_textBox.Size = new System.Drawing.Size(169, 26);
+            this.prenom_textBox.TabIndex = 10;
+            // 
+            // nom_textBox
+            // 
+            this.nom_textBox.Location = new System.Drawing.Point(95, 19);
+            this.nom_textBox.Name = "nom_textBox";
+            this.nom_textBox.Size = new System.Drawing.Size(169, 26);
+            this.nom_textBox.TabIndex = 9;
+            // 
+            // label12
+            // 
+            this.label12.AutoSize = true;
+            this.label12.Location = new System.Drawing.Point(21, 151);
+            this.label12.Name = "label12";
+            this.label12.Size = new System.Drawing.Size(38, 20);
+            this.label12.TabIndex = 8;
+            this.label12.Text = "Tél :";
+            // 
+            // label11
+            // 
+            this.label11.AutoSize = true;
+            this.label11.Location = new System.Drawing.Point(21, 107);
+            this.label11.Name = "label11";
+            this.label11.Size = new System.Drawing.Size(56, 20);
+            this.label11.TabIndex = 7;
+            this.label11.Text = "Email :";
+            // 
+            // label10
+            // 
+            this.label10.AutoSize = true;
+            this.label10.Location = new System.Drawing.Point(21, 64);
+            this.label10.Name = "label10";
+            this.label10.Size = new System.Drawing.Size(72, 20);
+            this.label10.TabIndex = 6;
+            this.label10.Text = "Prénom :";
+            // 
+            // label9
+            // 
+            this.label9.AutoSize = true;
+            this.label9.Location = new System.Drawing.Point(21, 22);
+            this.label9.Name = "label9";
+            this.label9.Size = new System.Drawing.Size(50, 20);
+            this.label9.TabIndex = 5;
+            this.label9.Text = "Nom :";
+            // 
             // ClientListView
             // 
             this.ClientListView.BackColor = System.Drawing.SystemColors.ActiveCaption;
@@ -275,211 +460,6 @@
             this.ClientListView.UseCompatibleStateImageBehavior = false;
             this.ClientListView.View = System.Windows.Forms.View.Details;
             this.ClientListView.SelectedIndexChanged += new System.EventHandler(this.ClientListView_SelectedIndexChanged);
-            // 
-            // ajouterClientBtn
-            // 
-            this.ajouterClientBtn.BackColor = System.Drawing.Color.DarkKhaki;
-            this.ajouterClientBtn.Location = new System.Drawing.Point(53, 657);
-            this.ajouterClientBtn.Name = "ajouterClientBtn";
-            this.ajouterClientBtn.Size = new System.Drawing.Size(163, 83);
-            this.ajouterClientBtn.TabIndex = 3;
-            this.ajouterClientBtn.Text = "Ajouter";
-            this.ajouterClientBtn.UseVisualStyleBackColor = false;
-            this.ajouterClientBtn.Click += new System.EventHandler(this.ajouterClientBtn_Click);
-            // 
-            // modifierClientBtn
-            // 
-            this.modifierClientBtn.BackColor = System.Drawing.Color.Coral;
-            this.modifierClientBtn.Location = new System.Drawing.Point(283, 657);
-            this.modifierClientBtn.Name = "modifierClientBtn";
-            this.modifierClientBtn.Size = new System.Drawing.Size(161, 83);
-            this.modifierClientBtn.TabIndex = 4;
-            this.modifierClientBtn.Text = "Modifier";
-            this.modifierClientBtn.UseVisualStyleBackColor = false;
-            this.modifierClientBtn.Click += new System.EventHandler(this.modifierClientBtn_Click);
-            // 
-            // rc_textBox
-            // 
-            this.rc_textBox.Location = new System.Drawing.Point(860, 13);
-            this.rc_textBox.Name = "rc_textBox";
-            this.rc_textBox.Size = new System.Drawing.Size(169, 26);
-            this.rc_textBox.TabIndex = 15;
-            // 
-            // nom_respo_textBox
-            // 
-            this.nom_respo_textBox.Location = new System.Drawing.Point(860, 55);
-            this.nom_respo_textBox.Name = "nom_respo_textBox";
-            this.nom_respo_textBox.Size = new System.Drawing.Size(169, 26);
-            this.nom_respo_textBox.TabIndex = 16;
-            // 
-            // patente_textBox
-            // 
-            this.patente_textBox.Location = new System.Drawing.Point(860, 95);
-            this.patente_textBox.Name = "patente_textBox";
-            this.patente_textBox.Size = new System.Drawing.Size(169, 26);
-            this.patente_textBox.TabIndex = 17;
-            // 
-            // label9
-            // 
-            this.label9.AutoSize = true;
-            this.label9.Location = new System.Drawing.Point(21, 22);
-            this.label9.Name = "label9";
-            this.label9.Size = new System.Drawing.Size(50, 20);
-            this.label9.TabIndex = 5;
-            this.label9.Text = "Nom :";
-            // 
-            // label10
-            // 
-            this.label10.AutoSize = true;
-            this.label10.Location = new System.Drawing.Point(21, 64);
-            this.label10.Name = "label10";
-            this.label10.Size = new System.Drawing.Size(72, 20);
-            this.label10.TabIndex = 6;
-            this.label10.Text = "Prénom :";
-            // 
-            // label11
-            // 
-            this.label11.AutoSize = true;
-            this.label11.Location = new System.Drawing.Point(21, 107);
-            this.label11.Name = "label11";
-            this.label11.Size = new System.Drawing.Size(56, 20);
-            this.label11.TabIndex = 7;
-            this.label11.Text = "Email :";
-            // 
-            // label12
-            // 
-            this.label12.AutoSize = true;
-            this.label12.Location = new System.Drawing.Point(21, 151);
-            this.label12.Name = "label12";
-            this.label12.Size = new System.Drawing.Size(38, 20);
-            this.label12.TabIndex = 8;
-            this.label12.Text = "Tél :";
-            // 
-            // nom_textBox
-            // 
-            this.nom_textBox.Location = new System.Drawing.Point(95, 19);
-            this.nom_textBox.Name = "nom_textBox";
-            this.nom_textBox.Size = new System.Drawing.Size(169, 26);
-            this.nom_textBox.TabIndex = 9;
-            // 
-            // prenom_textBox
-            // 
-            this.prenom_textBox.Location = new System.Drawing.Point(95, 61);
-            this.prenom_textBox.Name = "prenom_textBox";
-            this.prenom_textBox.Size = new System.Drawing.Size(169, 26);
-            this.prenom_textBox.TabIndex = 10;
-            // 
-            // email_textBox
-            // 
-            this.email_textBox.Location = new System.Drawing.Point(95, 102);
-            this.email_textBox.Name = "email_textBox";
-            this.email_textBox.Size = new System.Drawing.Size(169, 26);
-            this.email_textBox.TabIndex = 11;
-            // 
-            // tel_textBox
-            // 
-            this.tel_textBox.Location = new System.Drawing.Point(95, 148);
-            this.tel_textBox.Name = "tel_textBox";
-            this.tel_textBox.Size = new System.Drawing.Size(169, 26);
-            this.tel_textBox.TabIndex = 12;
-            // 
-            // label13
-            // 
-            this.label13.AutoSize = true;
-            this.label13.Location = new System.Drawing.Point(325, 22);
-            this.label13.Name = "label13";
-            this.label13.Size = new System.Drawing.Size(76, 20);
-            this.label13.TabIndex = 13;
-            this.label13.Text = "Adresse :";
-            // 
-            // adresse_textBox
-            // 
-            this.adresse_textBox.Location = new System.Drawing.Point(407, 16);
-            this.adresse_textBox.Multiline = true;
-            this.adresse_textBox.Name = "adresse_textBox";
-            this.adresse_textBox.ScrollBars = System.Windows.Forms.ScrollBars.Vertical;
-            this.adresse_textBox.Size = new System.Drawing.Size(236, 68);
-            this.adresse_textBox.TabIndex = 14;
-            // 
-            // label14
-            // 
-            this.label14.AutoSize = true;
-            this.label14.Location = new System.Drawing.Point(325, 105);
-            this.label14.Name = "label14";
-            this.label14.Size = new System.Drawing.Size(43, 20);
-            this.label14.TabIndex = 15;
-            this.label14.Text = "Fax :";
-            this.label14.Click += new System.EventHandler(this.label14_Click);
-            // 
-            // label15
-            // 
-            this.label15.AutoSize = true;
-            this.label15.Location = new System.Drawing.Point(325, 151);
-            this.label15.Name = "label15";
-            this.label15.Size = new System.Drawing.Size(76, 20);
-            this.label15.TabIndex = 16;
-            this.label15.Text = "Portable :";
-            // 
-            // fax_textBox
-            // 
-            this.fax_textBox.Location = new System.Drawing.Point(407, 99);
-            this.fax_textBox.Name = "fax_textBox";
-            this.fax_textBox.Size = new System.Drawing.Size(169, 26);
-            this.fax_textBox.TabIndex = 17;
-            // 
-            // portable_textBox
-            // 
-            this.portable_textBox.Location = new System.Drawing.Point(407, 148);
-            this.portable_textBox.Name = "portable_textBox";
-            this.portable_textBox.Size = new System.Drawing.Size(169, 26);
-            this.portable_textBox.TabIndex = 18;
-            // 
-            // label16
-            // 
-            this.label16.AutoSize = true;
-            this.label16.Location = new System.Drawing.Point(677, 22);
-            this.label16.Name = "label16";
-            this.label16.Size = new System.Drawing.Size(46, 20);
-            this.label16.TabIndex = 19;
-            this.label16.Text = "Ville :";
-            // 
-            // label17
-            // 
-            this.label17.AutoSize = true;
-            this.label17.Location = new System.Drawing.Point(677, 67);
-            this.label17.Name = "label17";
-            this.label17.Size = new System.Drawing.Size(51, 20);
-            this.label17.TabIndex = 20;
-            this.label17.Text = "Pays :";
-            // 
-            // ville_comboBox
-            // 
-            this.ville_comboBox.FormattingEnabled = true;
-            this.ville_comboBox.Items.AddRange(new object[] {
-            "Kénitra",
-            "Rabat ",
-            "Casablaca"});
-            this.ville_comboBox.Location = new System.Drawing.Point(774, 13);
-            this.ville_comboBox.Name = "ville_comboBox";
-            this.ville_comboBox.Size = new System.Drawing.Size(177, 28);
-            this.ville_comboBox.TabIndex = 21;
-            // 
-            // pays_textBox
-            // 
-            this.pays_textBox.Location = new System.Drawing.Point(774, 63);
-            this.pays_textBox.Name = "pays_textBox";
-            this.pays_textBox.Size = new System.Drawing.Size(169, 26);
-            this.pays_textBox.TabIndex = 22;
-            // 
-            // emptyFieldsBtn
-            // 
-            this.emptyFieldsBtn.BackColor = System.Drawing.Color.SandyBrown;
-            this.emptyFieldsBtn.Location = new System.Drawing.Point(765, 142);
-            this.emptyFieldsBtn.Name = "emptyFieldsBtn";
-            this.emptyFieldsBtn.Size = new System.Drawing.Size(193, 28);
-            this.emptyFieldsBtn.TabIndex = 23;
-            this.emptyFieldsBtn.Text = "Vider les champs";
-            this.emptyFieldsBtn.UseVisualStyleBackColor = false;
             // 
             // society_col
             // 
@@ -525,6 +505,28 @@
             // 
             this.adresse_col.Text = "Adresse";
             this.adresse_col.Width = 148;
+            // 
+            // ajouterClientBtn
+            // 
+            this.ajouterClientBtn.BackColor = System.Drawing.Color.DarkKhaki;
+            this.ajouterClientBtn.Location = new System.Drawing.Point(53, 657);
+            this.ajouterClientBtn.Name = "ajouterClientBtn";
+            this.ajouterClientBtn.Size = new System.Drawing.Size(163, 83);
+            this.ajouterClientBtn.TabIndex = 3;
+            this.ajouterClientBtn.Text = "Ajouter";
+            this.ajouterClientBtn.UseVisualStyleBackColor = false;
+            this.ajouterClientBtn.Click += new System.EventHandler(this.ajouterClientBtn_Click);
+            // 
+            // modifierClientBtn
+            // 
+            this.modifierClientBtn.BackColor = System.Drawing.Color.Coral;
+            this.modifierClientBtn.Location = new System.Drawing.Point(283, 657);
+            this.modifierClientBtn.Name = "modifierClientBtn";
+            this.modifierClientBtn.Size = new System.Drawing.Size(161, 83);
+            this.modifierClientBtn.TabIndex = 4;
+            this.modifierClientBtn.Text = "Modifier";
+            this.modifierClientBtn.UseVisualStyleBackColor = false;
+            this.modifierClientBtn.Click += new System.EventHandler(this.modifierClientBtn_Click);
             // 
             // ClientForm
             // 

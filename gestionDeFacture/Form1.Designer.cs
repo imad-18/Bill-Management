@@ -59,24 +59,24 @@
             this.quiter_button = new System.Windows.Forms.Button();
             this.supprimer_button = new System.Windows.Forms.Button();
             this.panel1 = new System.Windows.Forms.Panel();
-            this.facture_label = new System.Windows.Forms.Label();
-            this.rs_client_label = new System.Windows.Forms.Label();
-            this.if_client_label = new System.Windows.Forms.Label();
-            this.textBox1 = new System.Windows.Forms.TextBox();
-            this.metroComboBox1 = new MetroFramework.Controls.MetroComboBox();
-            this.IF_Client_textBox = new System.Windows.Forms.TextBox();
-            this.ice_client_label = new System.Windows.Forms.Label();
-            this.client_id_label = new System.Windows.Forms.Label();
-            this.ICE_client_textBox = new System.Windows.Forms.TextBox();
-            this.client_ID_textBox = new System.Windows.Forms.TextBox();
-            this.label9 = new System.Windows.Forms.Label();
-            this.label10 = new System.Windows.Forms.Label();
-            this.label11 = new System.Windows.Forms.Label();
-            this.label12 = new System.Windows.Forms.Label();
-            this.textBox2 = new System.Windows.Forms.TextBox();
-            this.textBox3 = new System.Windows.Forms.TextBox();
-            this.textBox4 = new System.Windows.Forms.TextBox();
             this.textBox5 = new System.Windows.Forms.TextBox();
+            this.textBox4 = new System.Windows.Forms.TextBox();
+            this.textBox3 = new System.Windows.Forms.TextBox();
+            this.textBox2 = new System.Windows.Forms.TextBox();
+            this.label12 = new System.Windows.Forms.Label();
+            this.label11 = new System.Windows.Forms.Label();
+            this.label10 = new System.Windows.Forms.Label();
+            this.label9 = new System.Windows.Forms.Label();
+            this.client_ID_textBox = new System.Windows.Forms.TextBox();
+            this.ICE_client_textBox = new System.Windows.Forms.TextBox();
+            this.client_id_label = new System.Windows.Forms.Label();
+            this.ice_client_label = new System.Windows.Forms.Label();
+            this.IF_Client_textBox = new System.Windows.Forms.TextBox();
+            this.metroComboBox1 = new MetroFramework.Controls.MetroComboBox();
+            this.textBox1 = new System.Windows.Forms.TextBox();
+            this.if_client_label = new System.Windows.Forms.Label();
+            this.rs_client_label = new System.Windows.Forms.Label();
+            this.facture_label = new System.Windows.Forms.Label();
             this.metroPanel1.SuspendLayout();
             this.panel1.SuspendLayout();
             this.SuspendLayout();
@@ -374,70 +374,91 @@
             this.panel1.Controls.Add(this.if_client_label);
             this.panel1.Controls.Add(this.rs_client_label);
             this.panel1.Controls.Add(this.facture_label);
-            this.panel1.Location = new System.Drawing.Point(44, 63);
+            this.panel1.Location = new System.Drawing.Point(44, 76);
             this.panel1.Name = "panel1";
             this.panel1.Size = new System.Drawing.Size(916, 243);
             this.panel1.TabIndex = 24;
+            this.panel1.Paint += new System.Windows.Forms.PaintEventHandler(this.panel1_Paint);
             // 
-            // facture_label
+            // textBox5
             // 
-            this.facture_label.AutoSize = true;
-            this.facture_label.Location = new System.Drawing.Point(49, 49);
-            this.facture_label.Name = "facture_label";
-            this.facture_label.Size = new System.Drawing.Size(92, 20);
-            this.facture_label.TabIndex = 0;
-            this.facture_label.Text = "Facture N° :";
+            this.textBox5.Location = new System.Drawing.Point(729, 152);
+            this.textBox5.Name = "textBox5";
+            this.textBox5.Size = new System.Drawing.Size(173, 26);
+            this.textBox5.TabIndex = 17;
             // 
-            // rs_client_label
+            // textBox4
             // 
-            this.rs_client_label.AutoSize = true;
-            this.rs_client_label.Location = new System.Drawing.Point(53, 111);
-            this.rs_client_label.Name = "rs_client_label";
-            this.rs_client_label.Size = new System.Drawing.Size(84, 20);
-            this.rs_client_label.TabIndex = 1;
-            this.rs_client_label.Text = "RS Client :";
+            this.textBox4.Location = new System.Drawing.Point(729, 111);
+            this.textBox4.Name = "textBox4";
+            this.textBox4.Size = new System.Drawing.Size(173, 26);
+            this.textBox4.TabIndex = 16;
             // 
-            // if_client_label
+            // textBox3
             // 
-            this.if_client_label.AutoSize = true;
-            this.if_client_label.Location = new System.Drawing.Point(17, 203);
-            this.if_client_label.Name = "if_client_label";
-            this.if_client_label.Size = new System.Drawing.Size(76, 20);
-            this.if_client_label.TabIndex = 2;
-            this.if_client_label.Text = "IF Client :";
+            this.textBox3.Location = new System.Drawing.Point(729, 61);
+            this.textBox3.Name = "textBox3";
+            this.textBox3.Size = new System.Drawing.Size(173, 26);
+            this.textBox3.TabIndex = 15;
             // 
-            // textBox1
+            // textBox2
             // 
-            this.textBox1.Location = new System.Drawing.Point(163, 46);
-            this.textBox1.Name = "textBox1";
-            this.textBox1.Size = new System.Drawing.Size(195, 26);
-            this.textBox1.TabIndex = 3;
+            this.textBox2.Location = new System.Drawing.Point(729, 18);
+            this.textBox2.Name = "textBox2";
+            this.textBox2.Size = new System.Drawing.Size(173, 26);
+            this.textBox2.TabIndex = 14;
             // 
-            // metroComboBox1
+            // label12
             // 
-            this.metroComboBox1.FormattingEnabled = true;
-            this.metroComboBox1.ItemHeight = 23;
-            this.metroComboBox1.Location = new System.Drawing.Point(163, 111);
-            this.metroComboBox1.Name = "metroComboBox1";
-            this.metroComboBox1.Size = new System.Drawing.Size(195, 29);
-            this.metroComboBox1.TabIndex = 4;
+            this.label12.AutoSize = true;
+            this.label12.Location = new System.Drawing.Point(634, 158);
+            this.label12.Name = "label12";
+            this.label12.Size = new System.Drawing.Size(92, 20);
+            this.label12.TabIndex = 13;
+            this.label12.Text = "Référence :";
             // 
-            // IF_Client_textBox
+            // label11
             // 
-            this.IF_Client_textBox.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(192)))), ((int)(((byte)(192)))), ((int)(((byte)(255)))));
-            this.IF_Client_textBox.Location = new System.Drawing.Point(101, 200);
-            this.IF_Client_textBox.Name = "IF_Client_textBox";
-            this.IF_Client_textBox.Size = new System.Drawing.Size(173, 26);
-            this.IF_Client_textBox.TabIndex = 5;
+            this.label11.AutoSize = true;
+            this.label11.Location = new System.Drawing.Point(634, 112);
+            this.label11.Name = "label11";
+            this.label11.Size = new System.Drawing.Size(42, 20);
+            this.label11.TabIndex = 12;
+            this.label11.Text = "Prix :";
             // 
-            // ice_client_label
+            // label10
             // 
-            this.ice_client_label.AutoSize = true;
-            this.ice_client_label.Location = new System.Drawing.Point(324, 203);
-            this.ice_client_label.Name = "ice_client_label";
-            this.ice_client_label.Size = new System.Drawing.Size(88, 20);
-            this.ice_client_label.TabIndex = 6;
-            this.ice_client_label.Text = "ICE Client :";
+            this.label10.AutoSize = true;
+            this.label10.Location = new System.Drawing.Point(634, 67);
+            this.label10.Name = "label10";
+            this.label10.Size = new System.Drawing.Size(69, 20);
+            this.label10.TabIndex = 11;
+            this.label10.Text = "Qantité :";
+            // 
+            // label9
+            // 
+            this.label9.AutoSize = true;
+            this.label9.Location = new System.Drawing.Point(631, 21);
+            this.label9.Name = "label9";
+            this.label9.Size = new System.Drawing.Size(98, 20);
+            this.label9.TabIndex = 10;
+            this.label9.Text = "Désignation:";
+            // 
+            // client_ID_textBox
+            // 
+            this.client_ID_textBox.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(192)))), ((int)(((byte)(192)))), ((int)(((byte)(255)))));
+            this.client_ID_textBox.Location = new System.Drawing.Point(729, 197);
+            this.client_ID_textBox.Name = "client_ID_textBox";
+            this.client_ID_textBox.Size = new System.Drawing.Size(173, 26);
+            this.client_ID_textBox.TabIndex = 9;
+            // 
+            // ICE_client_textBox
+            // 
+            this.ICE_client_textBox.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(192)))), ((int)(((byte)(192)))), ((int)(((byte)(255)))));
+            this.ICE_client_textBox.Location = new System.Drawing.Point(418, 200);
+            this.ICE_client_textBox.Name = "ICE_client_textBox";
+            this.ICE_client_textBox.Size = new System.Drawing.Size(173, 26);
+            this.ICE_client_textBox.TabIndex = 8;
             // 
             // client_id_label
             // 
@@ -449,85 +470,65 @@
             this.client_id_label.Text = "Client ID :";
             this.client_id_label.Click += new System.EventHandler(this.label10_Click);
             // 
-            // ICE_client_textBox
+            // ice_client_label
             // 
-            this.ICE_client_textBox.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(192)))), ((int)(((byte)(192)))), ((int)(((byte)(255)))));
-            this.ICE_client_textBox.Location = new System.Drawing.Point(418, 200);
-            this.ICE_client_textBox.Name = "ICE_client_textBox";
-            this.ICE_client_textBox.Size = new System.Drawing.Size(173, 26);
-            this.ICE_client_textBox.TabIndex = 8;
+            this.ice_client_label.AutoSize = true;
+            this.ice_client_label.Location = new System.Drawing.Point(324, 203);
+            this.ice_client_label.Name = "ice_client_label";
+            this.ice_client_label.Size = new System.Drawing.Size(88, 20);
+            this.ice_client_label.TabIndex = 6;
+            this.ice_client_label.Text = "ICE Client :";
             // 
-            // client_ID_textBox
+            // IF_Client_textBox
             // 
-            this.client_ID_textBox.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(192)))), ((int)(((byte)(192)))), ((int)(((byte)(255)))));
-            this.client_ID_textBox.Location = new System.Drawing.Point(729, 197);
-            this.client_ID_textBox.Name = "client_ID_textBox";
-            this.client_ID_textBox.Size = new System.Drawing.Size(173, 26);
-            this.client_ID_textBox.TabIndex = 9;
+            this.IF_Client_textBox.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(192)))), ((int)(((byte)(192)))), ((int)(((byte)(255)))));
+            this.IF_Client_textBox.Location = new System.Drawing.Point(101, 200);
+            this.IF_Client_textBox.Name = "IF_Client_textBox";
+            this.IF_Client_textBox.Size = new System.Drawing.Size(173, 26);
+            this.IF_Client_textBox.TabIndex = 5;
             // 
-            // label9
+            // metroComboBox1
             // 
-            this.label9.AutoSize = true;
-            this.label9.Location = new System.Drawing.Point(631, 21);
-            this.label9.Name = "label9";
-            this.label9.Size = new System.Drawing.Size(98, 20);
-            this.label9.TabIndex = 10;
-            this.label9.Text = "Désignation:";
+            this.metroComboBox1.FormattingEnabled = true;
+            this.metroComboBox1.ItemHeight = 23;
+            this.metroComboBox1.Location = new System.Drawing.Point(163, 111);
+            this.metroComboBox1.Name = "metroComboBox1";
+            this.metroComboBox1.Size = new System.Drawing.Size(195, 29);
+            this.metroComboBox1.TabIndex = 4;
             // 
-            // label10
+            // textBox1
             // 
-            this.label10.AutoSize = true;
-            this.label10.Location = new System.Drawing.Point(634, 67);
-            this.label10.Name = "label10";
-            this.label10.Size = new System.Drawing.Size(69, 20);
-            this.label10.TabIndex = 11;
-            this.label10.Text = "Qantité :";
+            this.textBox1.Location = new System.Drawing.Point(163, 46);
+            this.textBox1.Name = "textBox1";
+            this.textBox1.Size = new System.Drawing.Size(195, 26);
+            this.textBox1.TabIndex = 3;
             // 
-            // label11
+            // if_client_label
             // 
-            this.label11.AutoSize = true;
-            this.label11.Location = new System.Drawing.Point(634, 112);
-            this.label11.Name = "label11";
-            this.label11.Size = new System.Drawing.Size(42, 20);
-            this.label11.TabIndex = 12;
-            this.label11.Text = "Prix :";
+            this.if_client_label.AutoSize = true;
+            this.if_client_label.Location = new System.Drawing.Point(17, 203);
+            this.if_client_label.Name = "if_client_label";
+            this.if_client_label.Size = new System.Drawing.Size(76, 20);
+            this.if_client_label.TabIndex = 2;
+            this.if_client_label.Text = "IF Client :";
             // 
-            // label12
+            // rs_client_label
             // 
-            this.label12.AutoSize = true;
-            this.label12.Location = new System.Drawing.Point(634, 158);
-            this.label12.Name = "label12";
-            this.label12.Size = new System.Drawing.Size(92, 20);
-            this.label12.TabIndex = 13;
-            this.label12.Text = "Référence :";
+            this.rs_client_label.AutoSize = true;
+            this.rs_client_label.Location = new System.Drawing.Point(53, 111);
+            this.rs_client_label.Name = "rs_client_label";
+            this.rs_client_label.Size = new System.Drawing.Size(84, 20);
+            this.rs_client_label.TabIndex = 1;
+            this.rs_client_label.Text = "RS Client :";
             // 
-            // textBox2
+            // facture_label
             // 
-            this.textBox2.Location = new System.Drawing.Point(729, 18);
-            this.textBox2.Name = "textBox2";
-            this.textBox2.Size = new System.Drawing.Size(173, 26);
-            this.textBox2.TabIndex = 14;
-            // 
-            // textBox3
-            // 
-            this.textBox3.Location = new System.Drawing.Point(729, 61);
-            this.textBox3.Name = "textBox3";
-            this.textBox3.Size = new System.Drawing.Size(173, 26);
-            this.textBox3.TabIndex = 15;
-            // 
-            // textBox4
-            // 
-            this.textBox4.Location = new System.Drawing.Point(729, 111);
-            this.textBox4.Name = "textBox4";
-            this.textBox4.Size = new System.Drawing.Size(173, 26);
-            this.textBox4.TabIndex = 16;
-            // 
-            // textBox5
-            // 
-            this.textBox5.Location = new System.Drawing.Point(729, 152);
-            this.textBox5.Name = "textBox5";
-            this.textBox5.Size = new System.Drawing.Size(173, 26);
-            this.textBox5.TabIndex = 17;
+            this.facture_label.AutoSize = true;
+            this.facture_label.Location = new System.Drawing.Point(49, 49);
+            this.facture_label.Name = "facture_label";
+            this.facture_label.Size = new System.Drawing.Size(92, 20);
+            this.facture_label.TabIndex = 0;
+            this.facture_label.Text = "Facture N° :";
             // 
             // Form1
             // 
