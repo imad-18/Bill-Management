@@ -15,16 +15,20 @@ namespace gestionDeFacture
         public MenuForm()
         {
             InitializeComponent();
+            btnClientDashboard.Click += btnClientDashboard_Click;
+            btnFactureDashboard.Click += btnFactureDashboard_Click;
         }
 
         private void btnClientDashboard_Click(object sender, EventArgs e)
         {
-
+            ClientForm clientForm = new ClientForm();
+            clientForm.Show();
         }
 
         private void btnFactureDashboard_Click(object sender, EventArgs e)
         {
-
+            Form1 factureForm = new Form1();
+            factureForm.Show();
         }
     }
 }

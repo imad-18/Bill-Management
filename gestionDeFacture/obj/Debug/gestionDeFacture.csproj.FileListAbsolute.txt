@@ -12,3 +12,4 @@ C:\Users\lenovo\source\repos\gestionDeFacture\gestionDeFacture\obj\Debug\gestion
 C:\Users\lenovo\source\repos\gestionDeFacture\gestionDeFacture\obj\Debug\gestionDeFacture.exe
 C:\Users\lenovo\source\repos\gestionDeFacture\gestionDeFacture\obj\Debug\gestionDeFacture.pdb
 C:\Users\lenovo\source\repos\gestionDeFacture\gestionDeFacture\obj\Debug\gestionDeFacture.MenuForm.resources
+C:\Users\lenovo\source\repos\gestionDeFacture\gestionDeFacture\obj\Debug\gestionDeFacture.ClientForm.resources
