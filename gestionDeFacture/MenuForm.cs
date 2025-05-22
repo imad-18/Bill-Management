@@ -15,8 +15,8 @@ namespace gestionDeFacture
         public MenuForm()
         {
             InitializeComponent();
-            btnClientDashboard.Click += btnClientDashboard_Click;
-            btnFactureDashboard.Click += btnFactureDashboard_Click;
+            //btnClientDashboard.Click += btnClientDashboard_Click;
+            //btnFactureDashboard.Click += btnFactureDashboard_Click;
         }
 
         private void btnClientDashboard_Click(object sender, EventArgs e)
@@ -29,6 +29,11 @@ namespace gestionDeFacture
         {
             Form1 factureForm = new Form1();
             factureForm.Show();
+        }
+
+        private void button1_Click(object sender, EventArgs e)
+        {
+            this.Close();
         }
     }
 }

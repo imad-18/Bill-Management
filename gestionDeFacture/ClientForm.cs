@@ -75,6 +75,10 @@ namespace gestionDeFacture
             ice_textBox.Clear();
             rc_textBox.Clear();
             patente_textBox.Clear();
+            nom_textBox.Clear();
+            prenom_textBox.Clear();
+            pays_textBox.Clear();
+            ville_comboBox.Items.Clear();
         }
 
         private void ClientListView_SelectedIndexChanged(object sender, EventArgs e)

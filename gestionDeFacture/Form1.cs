@@ -218,7 +218,7 @@ namespace gestionDeFacture
 
         private void quiter_button_Click(object sender, EventArgs e)
         {
-
+            this.Close();
         }
 
         private void radioButton1_TextChanged(object sender, EventArgs e)
