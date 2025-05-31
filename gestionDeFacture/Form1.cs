@@ -16,6 +16,7 @@ namespace gestionDeFacture
         public Form1()
         {
             InitializeComponent();
+            LoadRSIntoComboBox();
         }
 
         private void metroLabel1_Click(object sender, EventArgs e)
@@ -214,7 +215,7 @@ namespace gestionDeFacture
             }
             
 
-        }
+    }
 
         private void quiter_button_Click(object sender, EventArgs e)
         {
@@ -247,5 +248,43 @@ namespace gestionDeFacture
         {
 
         }
+
+        private void metroComboBox1_SelectedIndexChanged(object sender, EventArgs e)
+        {
+            string selectedRS = metroComboBox1.SelectedItem?.ToString();
+
+            if (!string.IsNullOrEmpty(selectedRS))
+            {
+                var adapter = new DataSet1TableAdapters.InfosClientsTableAdapter();
+                var data = adapter.GetDataByRS(selectedRS); // We'll define this method next
+
+                if (data.Rows.Count > 0)
+                {
+                    var row = data[0];
+
+                    client_ID_textBox.Text = row.ClientId.ToString();
+                    IF_Client_textBox.Text = row.IsIFClientNull() ? "" : row.IFClient;
+                    ICE_client_textBox.Text = row.IsICENull() ? "" : row.ICE;
+                }
+            }
+        }
+
+
+        private void LoadRSIntoComboBox()
+        {
+            var adapter = new DataSet1TableAdapters.InfosClientsTableAdapter();
+            var data = adapter.GetData(); // Fetch all rows
+
+            metroComboBox1.Items.Clear(); // Optional: clear existing items
+
+            foreach (DataSet1.InfosClientsRow row in data)
+            {
+                if (!row.IsRSNull()) // Check for null to avoid errors
+                {
+                    metroComboBox1.Items.Add(row.RS);
+                }
+            }
+        }
+
     }
 }

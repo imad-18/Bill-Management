@@ -15,6 +15,7 @@ namespace gestionDeFacture
         public ClientForm()
         {
             InitializeComponent();
+            LoadClientsToListView();
         }
 
         private void label14_Click(object sender, EventArgs e)
@@ -24,40 +25,54 @@ namespace gestionDeFacture
 
         private void ajouterClientBtn_Click(object sender, EventArgs e)
         {
-            // Création d'un nouvel item client
-            ListViewItem clientListView = new ListViewItem(typeSoc_textBox.Text); // First column: Designation
-
-            // SubItems: client ID, ... Adresse
-            if (typeSoc_textBox != null && clientID_textBox != null &&
-                rs_textBox != null && nom_respo_textBox != null &&
-                tel_textBox != null && portable_textBox != null &&
-                fax_textBox != null && email_textBox != null &&
-                adresse_textBox != null)
+            if (typeSoc_textBox.Text == "" || rs_textBox.Text == "" || nom_respo_textBox.Text == "" ||
+                tel_textBox.Text == "" || portable_textBox.Text == "" || fax_textBox.Text == "" ||
+                email_textBox.Text == "" || adresse_textBox.Text == "")
             {
-
-
-                clientListView.SubItems.Add(clientID_textBox.Text);
-                clientListView.SubItems.Add(rs_textBox.Text);
-                clientListView.SubItems.Add(nom_respo_textBox.Text);
-                clientListView.SubItems.Add(tel_textBox.Text);
-                clientListView.SubItems.Add(portable_textBox.Text);
-                clientListView.SubItems.Add(fax_textBox.Text);
-                clientListView.SubItems.Add(email_textBox.Text);
-                clientListView.SubItems.Add(adresse_textBox.Text);
-            }
-            else
-            {
-                MessageBox.Show("Veuillez remplir tous les champs avant d'ajouter un client.");
+                MessageBox.Show("Veuillez remplir tous les champs obligatoires.");
                 return;
             }
 
-            MessageBox.Show("Client ajouté avec succès.");
-            // Ajouter l'item au ListView
-            ClientListView.Items.Add(clientListView);
+            try
+            {
+                // Create an instance of your TableAdapter
+                var adapter = new DataSet1TableAdapters.InfosClientsTableAdapter();
 
-            // Optionnel: Vider les TextBox après l'ajout
-            emptyTextBoxFields();
+                // Insert the new client using the adapter (adjust parameters as per your schema)
+                adapter.Insert(
+                    nom_respo_textBox.Text,
+                    typeSoc_textBox.Text,
+                    nom_textBox.Text,
+                    prenom_textBox.Text,
+                    tel_textBox.Text,
+                    portable_textBox.Text,
+                    fax_textBox.Text,
+                    email_textBox.Text,
+                    adresse_textBox.Text,
+                    ville_comboBox.Text,
+                    pays_textBox.Text,
+                    if_textBox.Text,
+                    rs_textBox.Text,
+                    rc_textBox.Text,
+                    patente_textBox.Text,
+                    ice_textBox.Text
+                );
+                MessageBox.Show(adapter.Connection.ConnectionString);
+
+                MessageBox.Show("Client inséré dans la base de données avec succès.");
+                LoadClientsToListView(); // <--- Refresh the ListView
+                emptyTextBoxFields(); // Optional: Clear fields after insert
+                                      // Add this temporarily to see the actual database path
+                MessageBox.Show("Database path: " + adapter.Connection.DataSource);
+                // or
+                MessageBox.Show("Connection string: " + adapter.Connection.ConnectionString);
+            }
+            catch (Exception ex)
+            {
+                MessageBox.Show("Erreur lors de l'insertion : " + ex.Message);
+            }
         }
+
 
         private void emptyTextBoxFields()
         {
@@ -81,6 +96,29 @@ namespace gestionDeFacture
             ville_comboBox.Items.Clear();
         }
 
+        private void LoadClientsToListView()
+        {
+            ClientListView.Items.Clear(); // Clear old items
+
+            var adapter = new DataSet1TableAdapters.InfosClientsTableAdapter();
+            var data = adapter.GetData(); // Get all rows
+
+            foreach (DataSet1.InfosClientsRow row in data)
+            {
+                ListViewItem item = new ListViewItem(row.TypeClient); // First column
+                item.SubItems.Add(row.ClientId.ToString());
+                item.SubItems.Add(row.RS);
+                item.SubItems.Add(row.NomRespo);
+                item.SubItems.Add(row.Tel);
+                item.SubItems.Add(row.Portable);
+                item.SubItems.Add(row.Fax);
+                item.SubItems.Add(row.Email);
+                item.SubItems.Add(row.Adresse);
+                ClientListView.Items.Add(item);
+            }
+        }
+
+
         private void ClientListView_SelectedIndexChanged(object sender, EventArgs e)
         {
             // Verification de la ligne séléctionner 
@@ -98,8 +136,32 @@ namespace gestionDeFacture
                 tel_textBox.Text = ClientListView.Items[i].SubItems[4].Text;
                 portable_textBox.Text = ClientListView.Items[i].SubItems[5].Text;
                 fax_textBox.Text = ClientListView.Items[i].SubItems[6].Text;
+
+                nom_textBox.Text = ClientListView.Items[i].SubItems[2].Text; 
+                prenom_textBox.Text = ClientListView.Items[i].SubItems[3].Text;
+
                 email_textBox.Text = ClientListView.Items[i].SubItems[7].Text;
                 adresse_textBox.Text = ClientListView.Items[i].SubItems[8].Text;
+
+                // Now fetch the full client data from the database
+                int clientId = int.Parse(clientID_textBox.Text);
+                var adapter = new DataSet1TableAdapters.InfosClientsTableAdapter();
+                var fullData = adapter.GetDataByClientId(clientId);
+
+                if (fullData.Count > 0)
+                {
+                    var row = fullData[0];
+
+                    // Fill extra fields not in the ListView
+                    nom_textBox.Text = row.IsNomNull() ? "" : row.Nom;
+                    prenom_textBox.Text = row.IsPrenomNull() ? "" : row.Prenom;
+                    if_textBox.Text = row.IsIFClientNull() ? "" : row.IFClient;
+                    ice_textBox.Text = row.IsICENull() ? "" : row.ICE;
+                    rc_textBox.Text = row.IsRCNull() ? "" : row.RC;
+                    patente_textBox.Text = row.IsPatenteNull() ? "" : row.Patente;
+                    pays_textBox.Text = row.IsPaysNull() ? "" : row.Pays;
+                    ville_comboBox.Text = row.IsVilleNull() ? "" : row.Ville;
+                }
 
             }
         }
@@ -142,6 +204,11 @@ namespace gestionDeFacture
         private void emptyFieldsBtn_Click(object sender, EventArgs e)
         {
             emptyTextBoxFields();
+        }
+
+        private void ClientForm_Load(object sender, EventArgs e)
+        {
+            LoadClientsToListView();
         }
     }
 }
